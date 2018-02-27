@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Space
+            android:layout_width="216dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/buttonDiv"
+            android:layout_height="wrap_content"
+            style="@style/Button"
+            android:onClick="div"
+            android:text="/" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/Button"
+            android:onClick="pushButton"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Button"
+            android:onClick="pushButton"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/Button"
+            android:onClick="pushButton"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/buttonMul"
+            style="@style/Button"
+            android:onClick="mul"
+            android:text="*" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/Button"
+            android:onClick="pushButton"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/Button"
+            android:onClick="pushButton"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/Button"
+            android:onClick="pushButton"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/buttonMin"
+            style="@style/Button"
+            android:onClick="min"
+            android:text="-" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button7"
+            style="@style/Button"
+            android:onClick="pushButton"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/button8"
+            style="@style/Button"
+            android:onClick="pushButton"
+            android:text="8"/>
+
+        <Button
+            android:id="@+id/button9"
+            style="@style/Button"
+            android:onClick="pushButton"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            style="@style/Button"
+            android:onClick="add"
+            android:text="+" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button0"
+            style="@style/Button"
+            android:layout_width="143dp"
+            android:layout_span="2"
+            android:onClick="pushButton"
+            android:text="0"/>
+
+        <Button
+            android:id="@+id/buttonC"
+            style="@style/Button"
+            android:onClick="clear"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/buttonRes"
+            style="@style/Button"
+            android:onClick="result"
+            android:text="="/>
+    </LinearLayout>
+
+</LinearLayout>
