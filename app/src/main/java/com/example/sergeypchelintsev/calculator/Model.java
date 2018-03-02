@@ -14,6 +14,7 @@ public class Model {
     public static void pushButton(int number) {
         string = string + number;
         b = Double.parseDouble(string);
+        
     }
 
     public static void clear() {
@@ -78,6 +79,7 @@ public class Model {
     }
 
     public static String getResult() {
+
         return string;
     }
 }

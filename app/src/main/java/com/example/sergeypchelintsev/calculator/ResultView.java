@@ -8,12 +8,20 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.TextView;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by sergeypchelintsev on 01.03.2018.
  */
 
 public class ResultView extends FrameLayout{
+
+    @BindView(R.id.res) TextView res;
+    @BindView(R.id.res2) TextView res2;
+
     public ResultView(@NonNull Context context) {
         super(context);
     }
@@ -36,5 +44,9 @@ public class ResultView extends FrameLayout{
         super.onFinishInflate();
 
         View.inflate(getContext(), R.layout.result, this);
+        ButterKnife.bind(this);
+
+
     }
+
 }
