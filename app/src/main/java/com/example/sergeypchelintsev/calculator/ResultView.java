@@ -45,8 +45,5 @@ public class ResultView extends FrameLayout{
 
         View.inflate(getContext(), R.layout.result, this);
         ButterKnife.bind(this);
-
-
     }
-
 }

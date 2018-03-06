@@ -1,5 +1,6 @@
 package com.example.sergeypchelintsev.calculator.calculator;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -28,6 +29,8 @@ public class CalculatorFragment extends Fragment
 
     @BindView(R.id.res)
     TextView mResult;
+    @BindView(R.id.keyboardView)
+    KeyboardView keyboardView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,7 +42,10 @@ public class CalculatorFragment extends Fragment
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
+
+        keyboardView.setOnClickNumberListener(this);
     }
+
 
     @Override
     public void onClickNumber(View view, int number) {
@@ -49,6 +55,7 @@ public class CalculatorFragment extends Fragment
     @Override
     public void onClickAdd(View view) {
         mPresenter.onPressAdd();
+
     }
 
     @Override

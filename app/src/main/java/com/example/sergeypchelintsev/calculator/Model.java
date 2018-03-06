@@ -6,45 +6,48 @@ package com.example.sergeypchelintsev.calculator;
  */
 
 public class Model {
-    private static double a = 0;
-    private static double b = 0;
-    private static int opFlag = 0;
-    private static String string = "";
+    private double a = 0;
+    private double b = 0;
+    private int opFlag = 0;
+    private String string = "";
 
-    public static void pushButton(int number) {
+    private ResultListener resultlistener;
+
+    public void pushButton(int number) {
         string = string + number;
         b = Double.parseDouble(string);
-
+        if (resultlistener != null) resultlistener.onResult(string);
     }
 
-    public static void clear() {
+    public void clear() {
         string = "";
         a = 0;
         b = 0;
         opFlag = 0;
+        if (resultlistener != null) resultlistener.onResult(string);
     }
 
-    public static void add() {
+    public void add() {
         action();
         opFlag = 1;
     }
 
-    public static void min() {
+    public void min() {
         action();
         opFlag = 2;
     }
 
-    public static void mul() {
+    public void mul() {
         action();
         opFlag = 3;
     }
 
-    public static void div() {
+    public void div() {
         action();
         opFlag = 4;
     }
 
-    private static void action() {
+    private void action() {
         if (string.length() != 0) {
             switch (opFlag) {
                 case 0:
@@ -70,16 +73,24 @@ public class Model {
             string = "";
             a = b;
         }
+        if (resultlistener != null) resultlistener.onResult(string);
     }
 
-    public static void result() {
+    public void result() {
         action();
         string = "" + b;
         opFlag = 0;
+        if (resultlistener != null) resultlistener.onResult(string);
     }
 
-    public static String getResult() {
-
-        return string;
+    public void setResultListener(ResultListener resultListener) {
+        this.resultlistener = resultListener;
     }
+
+    interface ResultListener {
+        void onResult(String string);
+    }
+
 }
+
+

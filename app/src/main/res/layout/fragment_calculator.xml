@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"/>
 
     <com.example.sergeypchelintsev.calculator.calculator.KeyboardView
-        android:id="@+id/keyboard"
+        android:id="@+id/keyboardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

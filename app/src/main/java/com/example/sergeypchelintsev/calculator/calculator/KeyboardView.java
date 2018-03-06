@@ -9,6 +9,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.example.sergeypchelintsev.calculator.R;
 
@@ -131,41 +132,36 @@ public class KeyboardView extends FrameLayout {
                 break;
         }
         if (listener != null) this.listener.onClickNumber(view, number);
+
     }
 
     @OnClick(R.id.buttonAdd)
     public void onClickAdd(View view) {
-        char sign = '+';
         if (listener != null) this.listener.onClickAdd(view);
     }
 
     @OnClick(R.id.buttonMin)
     public void onClickMin(View view) {
-        char sign = '-';
         if (listener != null) this.listener.onClickMin(view);
     }
 
     @OnClick(R.id.buttonMul)
     public void onClickMul(View view) {
-        char sign = '*';
         if (listener != null) this.listener.onClickMul(view);
     }
 
     @OnClick(R.id.buttonDiv)
     public void onClickDiv(View view) {
-        char sign = '/';
         if (listener != null) this.listener.onClickDiv(view);
     }
 
     @OnClick(R.id.buttonRes)
     public void onClickRes(View view) {
-        char sign = '=';
         if (listener != null) this.listener.onClickRes(view);
     }
 
     @OnClick(R.id.buttonC)
     public void onClickC(View view) {
-        char sign = 'C';
         if (listener != null) this.listener.onClickC(view);
     }
 
